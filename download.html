@@ -7,68 +7,31 @@
   <title>DOWNLOAD</title>
 </head>
 <body>
-  <div class="card" onclick="toggleCard(this)">
-    <div class="card-content">
-      <h2>Card 1 (Expanded)</h2>
-      <p>This is the expanded card content.</p>
+  <header>
+    <a href="#" class="logo">TRANSMARIZE</a>
+    <ul>
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="./about.html">ABOUT</a></li>
+      <li><a href="./download.html" class="active">DOWNLOAD</a></li>
+      <li><a href="#">GUIDES</a></li>
+    </ul>
+  </header>
+
+  <div>
+    <div class="logo-container">
+      <div class="logo">Download</div>
     </div>
-  </div>
 
-  <div class="card" onclick="toggleCard(this)">
-    <div class="card-content">
-      <h2>Card 2</h2>
-      <p>This is the collapsed card content.</p>
+    <div class="cross-platform">
+      <div class="rectangular-Windows">
+        <button class="Windows">Windows</button>
+      </div>
+  
+      <div class="rectangular-Linux">
+        <button class="Linux">Linux</button>
+      </div>
     </div>
+
   </div>
-
-  <div class="card" onclick="toggleCard(this)">
-    <div class="card-content">
-      <h2>Card 3</h2>
-      <p>This is the collapsed card content.</p>
-    </div>
-  </div>
-
-  <div class="card" onclick="toggleCard(this)">
-    <div class="card-content">
-      <h2>Card 4</h2>
-      <p>This is the collapsed card content.</p>
-    </div>
-  </div>
-
-  <div class="card" onclick="toggleCard(this)">
-    <div class="card-content">
-      <h2>Card 5</h2>
-      <p>This is the collapsed card content.</p>
-    </div>
-  </div>
-
-  <script>
-    let expandedCard = null;
-
-    function toggleCard(card) 
-    {
-      if (expandedCard === card) 
-      {
-        // If the same card is clicked again, collapse it
-        card.classList.remove('expanded');
-        card.classList.add('collapsed');
-        expandedCard = null;
-      } 
-      else 
-      {
-        // Collapse the previously expanded card (if any)
-        if (expandedCard) 
-        {
-          expandedCard.classList.remove('expanded');
-          expandedCard.classList.add('collapsed');
-        }
-
-        // Expand the clicked card
-        card.classList.remove('collapsed');
-        card.classList.add('expanded');
-        expandedCard = card;
-      }
-    }
-  </script>
 </body>
 </html>

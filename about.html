@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/styles/style_about.css">
+  <title>ABOUT</title>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">TRANSMARIZE</a>
+    <ul>
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="./about.html" class="active">ABOUT</a></li>
+      <li><a href="./download.html">DOWNLOAD</a></li>
+      <li><a href="#">GUIDES</a></li>
+    </ul>
+  </header>
+  <div class="row-container">
+    <div class="logo-container">
+      <div class="logo">Transmarize</div>
+    </div>
+  
+    <div class="card-container">
+      <div class="card card1 expanded" onclick="toggleCard(this)">
+        <div class="card-content">
+          <h2>Main App</h2>
+          <img src="./assets/App/aboutPicture/Main_start.png" alt="Image_1">
+        </div>
+      </div>
+  
+      <div class="card collapsed card2" onclick="toggleCard(this)">
+        <div class="card-content">
+          <h2>Explain</h2>
+          <img src="./assets/App/aboutPicture/Explain.png" alt="Image_2">
+        </div>
+      </div>
+  
+      <div class="card collapsed card3" onclick="toggleCard(this)">
+        <div class="card-content">
+          <h2>Translate Word</h2>
+          <img src="./assets/App/aboutPicture/TranslateWordView.png" alt="Image_3">
+        </div>
+      </div>
+  
+      <div class="card collapsed card4" onclick="toggleCard(this)">
+        <div class="card-content">
+          <h2>Word Book</h2>
+          <img src="./assets/App/aboutPicture/WordBook.png" alt="Image_4">
+        </div>
+      </div>
+  
+      <div class="card collapsed card5" onclick="toggleCard(this)">
+        <div class="card-content">
+          <h2>Revise and FlashCard</h2>
+          <img src="./assets/App/aboutPicture/ReviseAndFlashcard.png" alt="Image_5">
+        </div>
+      </div>
+    </div>
+
+    <div class="contact_about">
+      <p>Contact us: </p>
+      <div class="gmail_about">
+        <img alt="" src="./assets/App/gmail.svg">
+        <p class="space-between"></p>
+        <p>22520137 - 22520971@gm.uit.edu.vn</p>
+      </div>
+
+      <div class="github_about">
+        <img alt="" src="./assets/App/github-mark.svg">
+        <p></p>
+        <a rel="noopener" href="https://github.com/Binkeurss/TRANSMARIZE_LTTQ" target="_blank"><p>Github Transmarize</p></a>
+      </div>
+
+      <div class="figma_about">
+        <img alt="" src="./assets/App/figma.svg">
+        <p></p>
+        <a target="_blank" rel="noopener" href="https://www.figma.com/file/IxzjL80Egl6aLgVVisqhSO/LTTQ?type=design&node-id=0-1&mode=design&t=9cTaH54V9nGIf5Hu-0">
+          <p>Figma Design App</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script>
+    let expandedCard = document.querySelector('.expanded');
+
+    function toggleCard(card) 
+    {
+      if (expandedCard === card) 
+      {
+        // If the same card is clicked again, do nothing
+        return;
+      } 
+      else 
+      {
+        // Collapse the previously expanded card (if any)
+        if (expandedCard) 
+        {
+          expandedCard.classList.remove('expanded');
+          expandedCard.classList.add('collapsed');
+        }
+
+        // Expand the clicked card
+        card.classList.remove('collapsed');
+        card.classList.add('expanded');
+        expandedCard = card;
+      }
+    }
+  </script>
+</body>
+</html>

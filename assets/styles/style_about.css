@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(#2b1055, #7597de);
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  color:#2b1055;
+}
+
+.card-container 
+{
+  display: flex;
+  overflow: hidden;
+  width: 1800px; /* Adjust the overall width as needed */
+}
+
+.card 
+{
+  flex: 1;
+  height: 500px;
+  width: auto;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: flex 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  color: white; /* Text color */
+}
+
+.card.expanded 
+{
+  flex: 3; /* Increase the flex value for the expanded card to make it wider */
+  background-color: #3498db;
+}
+
+.card.collapsed 
+{
+  flex: 1; /* Reset the flex value for the collapsed cards */
+}
+
+.card.collapsed.card1 { background-color: #352368; }
+.card.collapsed.card2 { background-color: #e74c3c; }
+.card.collapsed.card3 { background-color: #2ecc71; }
+.card.collapsed.card4 { background-color: #f39c12; }
+.card.collapsed.card5 { background-color: #9b59b6; }
+
+.card-content 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.card img 
+{
+  max-width: 100%;
+  max-height: 100%;
+  transition: opacity 0.3s ease; /* Transition for image scaling */
+  transform: scale(0.8); /* Initial scale for the image */
+  opacity: 0;
+}
+
+.card.expanded img
+{
+  opacity: 1;
+  transform: scale(1); /* Scale for the expanded image */
+}
+
+.card:nth-child(2) img 
+{
+  max-width: 100%; /* Set the maximum width for the image */
+  max-height: 400px; /* Set the maximum height for the image */
+}
+
+
+.card h2 {
+  margin-top: 50px;
+  font-size: 30px;
+  transition: transform 0.3s ease;
+}
+
+.card.expanded h2 {
+  transform: rotate(0deg); /* Reset rotation for the expanded card */
+}
+
+.card.collapsed h2 {
+  transform: rotate(-90deg); /* Rotate the card name vertically */
+}
+
+.logo-container .logo
+{
+  text-align: center;
+  overflow: hidden;
+  font-family: Dancing Script;
+  font-size: 10em;
+  margin-bottom: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-container .logo:hover
+{
+  transform: scale(1.1);
+}
+
+.contact_about
+{
+  padding-left: 100px;
+  padding-top: 30px;
+  color: #fff;
+}
+
+.contact_about p
+{
+  font-size: 1.3em;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact_about p:hover
+{
+  transform:scale(1.05);
+}
+
+.contact_about div
+{
+  display: flex;
+  justify-content: left;
+}
+
+.contact_about div img
+{
+  height: 30px;
+  width: 30px;
+
+}
+
+.contact_about .gmail_about .space-between
+{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact_about .github_about img
+{
+  height: 30px;
+  width: 30px;
+}
+
+.contact_about p
+{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact_about a
+{
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact_about .figma_about img
+{
+  height: 30px;
+  width: 30px;
+}

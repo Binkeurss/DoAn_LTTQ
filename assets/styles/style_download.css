@@ -19,33 +19,94 @@ body
   background: linear-gradient(#2b1055, #7597de);
 }
 
-.card-container 
-{
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
-.card 
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  color:#2b1055;
+}
+
+.logo-container .logo
 {
-  flex: 1;
-  height: 430px;
-  margin: 10px;
+  text-align: center;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  font-family: Dancing Script;
+  font-size: 10em;
+  margin-bottom: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
-.card.expanded 
+.logo-container .logo:hover
 {
-  flex: 3; /* Increase the flex value for the expanded card to make it wider */
+  transform: scale(1.1);
 }
 
-.card.collapsed 
-{
-  flex: 1; /* Reset the flex value for the collapsed cards */
+
+
+.cross-platform {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.card-content 
-{
+.rectangular-Windows,
+.rectangular-Linux {
+  width: 200px;
+  height: 130px;
+  border: 2px solid #333;
   padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Windows,
+.Linux {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

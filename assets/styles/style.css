@@ -262,9 +262,9 @@ section img#moon
 .contact
 {
   padding-left: 100px;
-  padding-top: 20px;
+  padding-top: 30px;
   color: #fff;
-  background: linear-gradient(to top, rgb(112, 155, 227), #1c0522);
+  background: #1c0522;
 }
 
 .contact p

@@ -86,27 +86,71 @@ header ul li a.active {
 .cross-platform {
   padding: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.cross-platform .space-between
+{
+  padding: 150px;
 }
 
 .rectangular-Windows,
 .rectangular-Linux {
   width: 200px;
-  height: 130px;
+  height: 150px;
   border: 2px solid #333;
+  border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
+  background: #2b1055
+}
+
+.rectangular-Windows p,
+.rectangular-Linux p {
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  color: #fff;
+  font-family: Dancing Script;
 }
 
 .Windows,
 .Linux {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #3498db;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.Windows .windows,
+.Linux .linux
+{
+  height: 30px;
+  width: 30px;
+  padding-right: 10px;
+  transition: box-shadow 0.15s
+              opacity 0.15s;
+}
+
+.rectangular-Windows .Windows:hover,
+.rectangular-Linux .Linux:hover
+{
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.rectangular-Windows .Windows:active,
+.rectangular-Linux .Linux:active
+{
+  opacity: 0.5;
 }

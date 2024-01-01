@@ -314,3 +314,9 @@ section img#moon
   text-decoration: none;
   color: #fff;
 }
+
+.contact .figma img
+{
+  height: 30px;
+  width: 30px;
+}

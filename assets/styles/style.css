@@ -261,16 +261,56 @@ section img#moon
 
 .contact
 {
-  color: #fff
+  padding-left: 100px;
+  padding-top: 20px;
+  color: #fff;
+  background: linear-gradient(to top, rgb(112, 155, 227), #1c0522);
 }
 
-.contact .gmail
+.contact p
 {
-  justify-content: center;
+  font-size: 1.3em;
+  transition: transform 0.3s ease-in-out;
 }
 
-.contact .gmail .gmailsvg
+.contact p:hover
+{
+  transform:scale(1.05);
+}
+
+.contact div
+{
+  display: flex;
+  justify-content: left;
+}
+
+.contact div img
 {
   height: 30px;
   width: 30px;
+
+}
+
+.contact .gmail .space-between
+{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact .github img
+{
+  height: 30px;
+  width: 30px;
+}
+
+.contact p
+{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact a
+{
+  text-decoration: none;
+  color: #fff;
 }
